@@ -16,5 +16,18 @@ namespace Files_Project
         {
             InitializeComponent();
         }
+
+
+        OpenFileDialog File = new OpenFileDialog();
+        private void OpenFile_btn_Click(object sender, EventArgs e)
+        {
+            File.Filter = "txt files (*.txt)|*.txt";;
+            if(File.ShowDialog()==DialogResult.OK)
+            {
+                Filename_txt.Text = File.SafeFileName;
+                SaveFilee_txt.Text = File.FileName;
+
+            }
+        }
     }
 }
