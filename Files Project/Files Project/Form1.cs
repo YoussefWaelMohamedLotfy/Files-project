@@ -21,7 +21,7 @@ namespace Files_Project
         OpenFileDialog File = new OpenFileDialog();
         private void OpenFile_btn_Click(object sender, EventArgs e)
         {
-            File.Filter = "txt files (*.txt)|*.txt";;
+            File.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm" ;
             if(File.ShowDialog()==DialogResult.OK)
             {
                 Filename_txt.Text = File.SafeFileName;
