@@ -23,6 +23,7 @@ namespace Files_Project
         private void OpenFile_btn_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
             File.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm" ;
             if(File.ShowDialog()==DialogResult.OK)
             {
@@ -34,11 +35,17 @@ namespace Files_Project
 
         private void Display_but_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
             FileStream FS = new FileStream(File.FileName, FileMode.Open);
             string[] arr;
-            Data D;
+
             StreamReader SR = new StreamReader(FS);
             List<Data> L = new List<Data>();
+            dataGridView1.Columns.Add("id", "ID");
+            dataGridView1.Columns.Add("name", "Name");
+            dataGridView1.Columns.Add("gender", "Gender");
+            dataGridView1.Columns.Add("salary", "Salary");
             while (SR.Peek() != -1)
             {
                 string record = SR.ReadLine();
@@ -51,7 +58,6 @@ namespace Files_Project
                     arr[0] = "default:1";
 
                 //  D = new Data(id, name, gender, salary);
-
                 dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
             }
             SR.Close();
