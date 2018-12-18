@@ -22,6 +22,7 @@ namespace Files_Project
         OpenFileDialog File = new OpenFileDialog();
         private void OpenFile_btn_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             File.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm" ;
             if(File.ShowDialog()==DialogResult.OK)
             {
