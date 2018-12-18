@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml;
 
 namespace Files_Project
 {
@@ -19,16 +20,16 @@ namespace Files_Project
         }
 
 
-        OpenFileDialog File = new OpenFileDialog();
+        OpenFileDialog fileDialog = new OpenFileDialog();
         private void OpenFile_btn_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
-            File.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm" ;
-            if(File.ShowDialog()==DialogResult.OK)
+            fileDialog.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm" ;
+            if(fileDialog.ShowDialog()==DialogResult.OK)
             {
-                Filename_txt.Text = File.SafeFileName;
-                SaveFilee_txt.Text = File.FileName;
+                Filename_txt.Text = fileDialog.SafeFileName;
+                SaveFilee_txt.Text = fileDialog.FileName;
 
             }
         }
@@ -37,7 +38,7 @@ namespace Files_Project
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
-            FileStream FS = new FileStream(File.FileName, FileMode.Open);
+            FileStream FS = new FileStream(fileDialog.FileName, FileMode.Open);
             string[] arr;
 
             StreamReader SR = new StreamReader(FS);
@@ -63,9 +64,80 @@ namespace Files_Project
             SR.Close();
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        private void save_button_Click(object sender, EventArgs e)
         {
+            if (!File.Exists("NewFile1.xml"))
+            {
+                //XmlWriterSettings settings = new XmlWriterSettings { ConformanceLevel = ConformanceLevel.Document };
+                XmlWriter writer = XmlWriter.Create("NewFile1.xml");
+                
+                writer.WriteStartDocument();
 
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    writer.WriteStartElement("Record"); // Record open tag
+
+                    writer.WriteStartElement("ID");
+                    MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                    writer.WriteString(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Name");
+                    writer.WriteString(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Gender");
+                    writer.WriteString(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Salary");
+                    writer.WriteString(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                    writer.WriteEndElement();
+
+                    // ================================Errors are caused here===================================
+                    writer.WriteEndElement(); // Record closing tag
+                }
+
+                writer.WriteEndDocument();
+                writer.Close();
+            }
+            //else // For overwriting
+            {
+                //XmlWriterSettings settings = new XmlWriterSettings { ConformanceLevel = ConformanceLevel.Document };
+                //XmlWriter writer = XmlWriter.Create("NewFile1.xml");
+
+                //writer.WriteStartDocument();
+
+                //for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                //{
+                //    writer.WriteStartElement("Record"); // Record open tag
+
+                //    writer.WriteStartElement("ID");
+                //    MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                //    writer.WriteString(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                //    writer.WriteEndElement();
+
+                //    writer.WriteStartElement("Name");
+                //    writer.WriteString(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                //    writer.WriteEndElement();
+
+                //    writer.WriteStartElement("Gender");
+                //    writer.WriteString(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                //    writer.WriteEndElement();
+
+                //    writer.WriteStartElement("Salary");
+                //    writer.WriteString(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                //    writer.WriteEndElement();
+
+                //    writer.WriteEndElement(); // Record closing tag
+                //}
+
+                //writer.WriteEndDocument();
+                //writer.Close();
+            }
+
+
+            MessageBox.Show("Saved successfully!");
         }
     }
 }
