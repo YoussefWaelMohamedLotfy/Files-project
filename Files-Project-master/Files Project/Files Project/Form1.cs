@@ -141,7 +141,7 @@ namespace Files_Project
                     }
 
                 }
-               /* if (Primary_key!="")
+                /* if (Primary_key!="")
                  {
                      if (Primary_key == "id" || Primary_key == "ID")
                      {
@@ -154,7 +154,7 @@ namespace Files_Project
                          dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                      }
                  }
-                 /*
+                 */
 
 
 
