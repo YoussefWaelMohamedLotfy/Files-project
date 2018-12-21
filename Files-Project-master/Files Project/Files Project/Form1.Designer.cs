@@ -436,7 +436,9 @@
             this.Primary_combo.FormattingEnabled = true;
             this.Primary_combo.Items.AddRange(new object[] {
             "ID",
-            "Name"});
+            "Name",
+            "Salary",
+            "Gender"});
             this.Primary_combo.Location = new System.Drawing.Point(125, 126);
             this.Primary_combo.Name = "Primary_combo";
             this.Primary_combo.Size = new System.Drawing.Size(121, 24);
@@ -705,7 +707,7 @@
             this.Primary_but.IdleFillColor = System.Drawing.Color.White;
             this.Primary_but.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Primary_but.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Primary_but.Location = new System.Drawing.Point(494, 116);
+            this.Primary_but.Location = new System.Drawing.Point(490, 112);
             this.Primary_but.Margin = new System.Windows.Forms.Padding(5);
             this.Primary_but.Name = "Primary_but";
             this.Primary_but.Size = new System.Drawing.Size(76, 38);

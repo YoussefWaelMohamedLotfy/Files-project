@@ -452,19 +452,72 @@ namespace Files_Project
 
         private void Primary_but_Click(object sender, EventArgs e)
         {
-           // bool check=
-            for(int i=0;i<dataGridView1.Rows.Count-1;i++)
+            if (Primary_combo.SelectedItem.ToString() == "ID")
             {
-                for(int j=i+1;j<dataGridView1.Rows.Count-1;j++)
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-
-                    if(dataGridView1.Rows[i].Cells[0].Value.ToString()== dataGridView1.Rows[i].Cells[0].Value.ToString())
+                    for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
                     {
 
-                        MessageBox.Show("Dupplicated");
-                        break;
+                        if (dataGridView1.Rows[i].Cells[0].Value.ToString() == dataGridView1.Rows[j].Cells[0].Value.ToString())
+                        {
+
+                            MessageBox.Show("Dupplicated");
+                            break;
+                        }
                     }
                 }
+            }
+
+            if (Primary_combo.SelectedItem.ToString() == "Salary")
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
+                    {
+
+                        if (dataGridView1.Rows[i].Cells[3].Value.ToString() == dataGridView1.Rows[j].Cells[3].Value.ToString())
+                        {
+
+                            MessageBox.Show("Dupplicated");
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (Primary_combo.SelectedItem.ToString() == "Gender")
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
+                    {
+
+                        if (dataGridView1.Rows[i].Cells[2].Value.ToString() == dataGridView1.Rows[j].Cells[2].Value.ToString())
+                        {
+
+                            MessageBox.Show("Dupplicated");
+                            break;
+                        }
+                    }
+                }
+            }
+            else if(Primary_combo.SelectedItem.ToString() == "Name")
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
+                    {
+
+                        if (dataGridView1.Rows[i].Cells[1].Value.ToString() == dataGridView1.Rows[j].Cells[1].Value.ToString())
+                        {
+
+                            MessageBox.Show("Dupplicated");
+                            break;
+                        }
+                    }
+                }
+
             }
         }
 
