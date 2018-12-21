@@ -44,7 +44,7 @@ namespace Files_Project
             string Condition = Condition_text.Text;
             string Value = value_text.Text;
             List<string> l1 = new List<string>();
-
+            string Delemiter = Del_txt.Text;
 
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
@@ -58,7 +58,7 @@ namespace Files_Project
             while (SR.Peek() != -1)
             {
                 record = SR.ReadLine();
-                arr = record.Split('@');
+                arr = record.Split(Delemiter[0]);
 
                 string id = arr[0];
                 string name = arr[1];

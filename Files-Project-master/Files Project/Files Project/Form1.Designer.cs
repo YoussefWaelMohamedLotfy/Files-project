@@ -49,7 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.Del_txt = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.SaveFilee_txt);
             this.panel1.Controls.Add(this.Filename_txt);
-            this.panel1.Controls.Add(this.bunifuCustomTextbox1);
+            this.panel1.Controls.Add(this.Del_txt);
             this.panel1.Controls.Add(this.OpenFile_btn);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -360,14 +360,13 @@
             this.comboBox1.Size = new System.Drawing.Size(65, 24);
             this.comboBox1.TabIndex = 21;
             // 
-            // bunifuCustomTextbox1
+            // Del_txt
             // 
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(233, 124);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.ReadOnly = true;
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(125, 20);
-            this.bunifuCustomTextbox1.TabIndex = 6;
+            this.Del_txt.BorderColor = System.Drawing.Color.SeaGreen;
+            this.Del_txt.Location = new System.Drawing.Point(233, 124);
+            this.Del_txt.Name = "Del_txt";
+            this.Del_txt.Size = new System.Drawing.Size(125, 20);
+            this.Del_txt.TabIndex = 6;
             // 
             // label6
             // 
@@ -762,7 +761,7 @@
         private System.Windows.Forms.Label Value;
         private System.Windows.Forms.TextBox value_text;
         private System.Windows.Forms.Label label6;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox Del_txt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
