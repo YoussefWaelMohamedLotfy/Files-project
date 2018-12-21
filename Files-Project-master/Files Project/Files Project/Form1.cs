@@ -42,7 +42,7 @@ namespace Files_Project
             string Condition = Condition_text.Text;
             string Value = value_text.Text;
             List<string> l1 = new List<string>();
-
+            
 
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
@@ -75,6 +75,7 @@ namespace Files_Project
                     {
                         if (arr[1] == "")
                         {
+                            MessageBox.Show("Name shouldn't be empty");
                             continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -83,6 +84,8 @@ namespace Files_Project
                     {
                         if (arr[0] == "")
                         {
+                            MessageBox.Show("ID shouldn't be empty");
+
                             continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -92,6 +95,7 @@ namespace Files_Project
                     {
                         if (arr[2] == "")
                         {
+                            MessageBox.Show("Gender shouldn't be empty");
                             continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -101,6 +105,7 @@ namespace Files_Project
                     {
                         if (arr[3] == "")
                         {
+                            MessageBox.Show("Salary shouldn't be empty");
                             continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -159,6 +164,8 @@ namespace Files_Project
                     {
                         if (l1.Contains(arr[0]))
                         {
+                            MessageBox.Show("ID should be unique");
+                          
                             continue;
                         }
                         l1.Add(arr[0]);
@@ -170,16 +177,18 @@ namespace Files_Project
                     {
                         if (l1.Contains(arr[1]))
                         {
+                            MessageBox.Show("Name should be unique");
                             continue;
                         }
                         l1.Add(arr[1]);
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
 
-                   else if (Primary_key == "Gender" || Primary_key == "gender")
+                  else if (Primary_key == "Gender" || Primary_key == "gender")
                     {
                         if (l1.Contains(arr[2]))
                         {
+                            MessageBox.Show("Gender should be unique");
                             continue;
                         }
                         l1.Add(arr[2]);
@@ -191,6 +200,7 @@ namespace Files_Project
                     {
                         if (l1.Contains(arr[3]))
                         {
+                            MessageBox.Show("Salary should be unique");
                             continue;
                         }
                         l1.Add(arr[3]);
