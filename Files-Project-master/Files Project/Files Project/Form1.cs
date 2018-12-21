@@ -176,7 +176,7 @@ namespace Files_Project
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
 
-                   /* else if (Primary_key == "Gender" || Primary_key == "gender")
+                   else if (Primary_key == "Gender" || Primary_key == "gender")
                     {
                         if (l1.Contains(arr[2]))
                         {
@@ -185,7 +185,7 @@ namespace Files_Project
                         l1.Add(arr[2]);
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
-                    */
+                    
 
                     else if (Primary_key == "Salary" || Primary_key == "salary")
                     {
