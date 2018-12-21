@@ -16,6 +16,13 @@ namespace Files_Project
     {
         List<string> mylist;
         string record;
+
+        bool IsNull =false;
+        //bool IsDefault = false;
+        bool IsRepeat = false;
+        bool IsCheck = false;
+        bool open = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +32,9 @@ namespace Files_Project
         OpenFileDialog fileDialog = new OpenFileDialog();
         private void OpenFile_btn_Click(object sender, EventArgs e)
         {
+            label6.Visible = true;
+            Del_txt.Visible = true;
+            
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
             fileDialog.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm";
@@ -38,6 +48,10 @@ namespace Files_Project
 
         private void Display_but_Click(object sender, EventArgs e)
         {
+            open = true;
+            dataGridView1.Visible = true;
+            save_button.Visible = true;
+            groupBox2.Visible = true;
             string NotNull = NotNull_text.Text;
             string Def = Default_text.Text;
             string Primary_key = Primary_text.Text;
@@ -226,50 +240,56 @@ namespace Files_Project
 
         private void save_button_Click(object sender, EventArgs e)
         {
-
-            XmlWriter writer = XmlWriter.Create("NewFile1.xml");
-            writer.WriteStartDocument();
-            writer.WriteStartElement("Records");
-
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            if (IsRepeat == true || IsCheck == true || IsNull == true|| open==false)
             {
-
-                writer.WriteStartElement("Person");
-                writer.WriteStartAttribute("ID");
-                writer.WriteValue(dataGridView1.Rows[i].Cells[0].Value.ToString());
-                writer.WriteEndAttribute();
-                writer.WriteEndElement();
-
-                writer.WriteStartElement("Person");
-                writer.WriteStartAttribute("Name");
-                writer.WriteValue(dataGridView1.Rows[i].Cells[1].Value.ToString());
-                writer.WriteEndAttribute();
-                writer.WriteEndElement();
-
-                writer.WriteStartElement("Person");
-                writer.WriteStartAttribute("Gender");
-                writer.WriteValue(dataGridView1.Rows[i].Cells[2].Value.ToString());
-                writer.WriteEndAttribute();
-                writer.WriteEndElement();
-
-                writer.WriteStartElement("Person");
-                writer.WriteStartAttribute("Salary");
-                writer.WriteValue(dataGridView1.Rows[i].Cells[3].Value.ToString());
-                writer.WriteEndAttribute();
-                writer.WriteEndElement();
-
-
-
+                MessageBox.Show("Sorry the data are not sastisfied with constrains");
             }
-            writer.WriteEndElement();
-            writer.WriteEndDocument();
+            else
+            {
+                XmlWriter writer = XmlWriter.Create("NewFile1.xml");
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Records");
 
-            writer.Flush();
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+
+                    writer.WriteStartElement("Person");
+                    writer.WriteStartAttribute("ID");
+                    writer.WriteValue(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                    writer.WriteEndAttribute();
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Person");
+                    writer.WriteStartAttribute("Name");
+                    writer.WriteValue(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    writer.WriteEndAttribute();
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Person");
+                    writer.WriteStartAttribute("Gender");
+                    writer.WriteValue(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                    writer.WriteEndAttribute();
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Person");
+                    writer.WriteStartAttribute("Salary");
+                    writer.WriteValue(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                    writer.WriteEndAttribute();
+                    writer.WriteEndElement();
+
+
+
+                }
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+
+                writer.Flush();
 
 
 
 
-            MessageBox.Show("Saved successfully!");
+                MessageBox.Show("Saved successfully!");
+            }
         }
 
         private void NotNull_text_TextChanged(object sender, EventArgs e)
@@ -292,11 +312,7 @@ namespace Files_Project
 
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-            
-           
-        }
+     
 
         private void null_but_Click(object sender, EventArgs e)
         {
@@ -308,6 +324,7 @@ namespace Files_Project
                     if (string.IsNullOrEmpty(dataGridView1.Rows[i].Cells[0].Value.ToString()))
                     {
                         MessageBox.Show("Id column has a Null value ");
+                        IsNull = true;
                         break;
                     }
                 }
@@ -319,6 +336,7 @@ namespace Files_Project
                     if (string.IsNullOrEmpty(dataGridView1.Rows[i].Cells[1].Value.ToString()))
                     {
                         MessageBox.Show("Name column has a Null value ");
+                        IsNull = true;
                         break;
                     }
                 }
@@ -331,6 +349,8 @@ namespace Files_Project
                     if (string.IsNullOrEmpty(dataGridView1.Rows[i].Cells[2].Value.ToString()))
                     {
                         MessageBox.Show("Gender column has a Null value ");
+                        IsNull = true;
+                     
                         break;
                     }
                 }
@@ -343,11 +363,12 @@ namespace Files_Project
                     if (string.IsNullOrEmpty(dataGridView1.Rows[i].Cells[3].Value.ToString()))
                     {
                         MessageBox.Show("Salary column has a Null value ");
+                        IsNull = true;
                         break;
                     }
                 }
             }
-           
+            Null_combo.SelectedItem = null;
         }
 
         private void default_but_Click(object sender, EventArgs e)
@@ -400,6 +421,7 @@ namespace Files_Project
                     }
                 }
             }
+            Default_combo.SelectedItem = null;
         }
 
         private void check_but_Click(object sender, EventArgs e)
@@ -408,19 +430,20 @@ namespace Files_Project
 
           if(Check_combo.SelectedItem.ToString()== "Data Greater than Value")
           {
-                for (int i = 1; i < dataGridView1.Rows.Count-1;i++)
+                for (int i = 0; i < dataGridView1.Rows.Count-1;i++)
                 {
                     int  temp = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value.ToString());
 
                     if ( Checkvalue > temp)
                     {
                         MessageBox.Show("Error1 ");
+                        IsCheck = true;
                         break;
                     }
 
                 }
           }
-          else if(Check_combo.SelectedItem.ToString() == " Data Smaller than Value")
+          else if(Check_combo.SelectedItem.ToString() == "Data smaller than Value")
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
@@ -429,12 +452,13 @@ namespace Files_Project
                     if (Checkvalue < temp)
                     {
                         MessageBox.Show("Error2 ");
+                        IsCheck = true;
                         break;
                     }
 
                 }
             }
-          else if(Check_combo.SelectedItem.ToString() == " Data Equale  Value")
+          else if(Check_combo.SelectedItem.ToString() == "Data Equale Value")
           {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
@@ -443,11 +467,14 @@ namespace Files_Project
                     if (Checkvalue != temp)
                     {
                         MessageBox.Show("Error3 ");
+                        IsCheck = true;
                         break;
                     }
 
                 }
-            }
+          }
+            Check_combo.SelectedItem = null;
+           
         }
 
         private void Primary_but_Click(object sender, EventArgs e)
@@ -456,6 +483,7 @@ namespace Files_Project
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
+                   
                     for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
                     {
 
@@ -463,6 +491,7 @@ namespace Files_Project
                         {
 
                             MessageBox.Show("Dupplicated");
+                            IsRepeat = true;
                             break;
                         }
                     }
@@ -480,6 +509,7 @@ namespace Files_Project
                         {
 
                             MessageBox.Show("Dupplicated");
+                            IsRepeat = true;
                             break;
                         }
                     }
@@ -497,6 +527,8 @@ namespace Files_Project
                         {
 
                             MessageBox.Show("Dupplicated");
+                            IsRepeat = true;
+                           
                             break;
                         }
                     }
@@ -513,16 +545,36 @@ namespace Files_Project
                         {
 
                             MessageBox.Show("Dupplicated");
+                            IsRepeat = true;
                             break;
                         }
                     }
                 }
 
             }
+            Primary_combo.SelectedItem = null;
         }
 
         private void Check_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Music_but_Click(object sender, EventArgs e)
+        {
+            System.Media.SoundPlayer SP = new System.Media.SoundPlayer(@"C:\Users\el aqsa\Videos\Files-Project\Files-Project-master\Files Project\Files Project\Alan.wav");
+            SP.Play();
+           
+        }
+
+        private void Del_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Del_txt_Enter(object sender, EventArgs e)
+        {
+            Display_but.Visible = true;
 
         }
     }

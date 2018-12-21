@@ -30,9 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Display_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label6 = new System.Windows.Forms.Label();
             this.SaveFilee_txt = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.Filename_txt = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.Del_txt = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.OpenFile_btn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.save_button = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -47,16 +51,19 @@
             this.Value = new System.Windows.Forms.Label();
             this.value_text = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Del_txt = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Primary_combo = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Primary_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.check_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.default_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.null_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Check_combo = new System.Windows.Forms.ComboBox();
+            this.Null_combo = new System.Windows.Forms.ComboBox();
+            this.Default_combo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Check_txt = new System.Windows.Forms.TextBox();
             this.Default_txt = new System.Windows.Forms.TextBox();
@@ -65,13 +72,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.Default_combo = new System.Windows.Forms.ComboBox();
-            this.Null_combo = new System.Windows.Forms.ComboBox();
-            this.Check_combo = new System.Windows.Forms.ComboBox();
-            this.null_but = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.default_but = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.check_but = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Primary_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Music_but = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -82,6 +83,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Music_but);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.Display_but);
@@ -90,10 +92,36 @@
             this.panel1.Controls.Add(this.Filename_txt);
             this.panel1.Controls.Add(this.Del_txt);
             this.panel1.Controls.Add(this.OpenFile_btn);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(846, 160);
+            this.panel1.Size = new System.Drawing.Size(1042, 173);
             this.panel1.TabIndex = 0;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.White;
+            this.radioButton2.Location = new System.Drawing.Point(34, 125);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(69, 23);
+            this.radioButton2.TabIndex = 26;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Excel";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(36, 92);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(48, 23);
+            this.radioButton1.TabIndex = 25;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "txt";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Display_but
             // 
@@ -119,7 +147,23 @@
             this.Display_but.Size = new System.Drawing.Size(102, 88);
             this.Display_but.TabIndex = 4;
             this.Display_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Display_but.Visible = false;
             this.Display_but.Click += new System.EventHandler(this.Display_but_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(124, 121);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 21);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Delemiter";
+            this.label6.Visible = false;
             // 
             // SaveFilee_txt
             // 
@@ -138,6 +182,17 @@
             this.Filename_txt.ReadOnly = true;
             this.Filename_txt.Size = new System.Drawing.Size(258, 20);
             this.Filename_txt.TabIndex = 2;
+            // 
+            // Del_txt
+            // 
+            this.Del_txt.BorderColor = System.Drawing.Color.SeaGreen;
+            this.Del_txt.Location = new System.Drawing.Point(233, 124);
+            this.Del_txt.Name = "Del_txt";
+            this.Del_txt.Size = new System.Drawing.Size(125, 20);
+            this.Del_txt.TabIndex = 6;
+            this.Del_txt.Visible = false;
+            this.Del_txt.TextChanged += new System.EventHandler(this.Del_txt_TextChanged);
+            this.Del_txt.Enter += new System.EventHandler(this.Del_txt_Enter);
             // 
             // OpenFile_btn
             // 
@@ -173,6 +228,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(442, 270);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.Visible = false;
             // 
             // save_button
             // 
@@ -198,6 +254,7 @@
             this.save_button.Size = new System.Drawing.Size(176, 43);
             this.save_button.TabIndex = 5;
             this.save_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.save_button.Visible = false;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // label1
@@ -337,85 +394,7 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Constrains";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(108, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 21);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Nmae of Column";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(242, 172);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(65, 24);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // Del_txt
-            // 
-            this.Del_txt.BorderColor = System.Drawing.Color.SeaGreen;
-            this.Del_txt.Location = new System.Drawing.Point(233, 124);
-            this.Del_txt.Name = "Del_txt";
-            this.Del_txt.Size = new System.Drawing.Size(125, 20);
-            this.Del_txt.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(124, 121);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 21);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Delemiter";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(36, 92);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 23);
-            this.radioButton1.TabIndex = 25;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "txt";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(34, 125);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 23);
-            this.radioButton2.TabIndex = 26;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Excel";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(312, 172);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 23);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.groupBox1.Visible = false;
             // 
             // label7
             // 
@@ -430,6 +409,37 @@
             this.label7.Size = new System.Drawing.Size(53, 21);
             this.label7.TabIndex = 23;
             this.label7.Text = "value";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(312, 172);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(86, 23);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(242, 172);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(65, 24);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(108, 34);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 21);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Nmae of Column";
             // 
             // Primary_combo
             // 
@@ -465,12 +475,156 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(337, 458);
+            this.groupBox2.Location = new System.Drawing.Point(454, 196);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(584, 207);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Constrains";
+            this.groupBox2.Visible = false;
+            // 
+            // Primary_but
+            // 
+            this.Primary_but.ActiveBorderThickness = 1;
+            this.Primary_but.ActiveCornerRadius = 20;
+            this.Primary_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.ActiveForecolor = System.Drawing.Color.White;
+            this.Primary_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.BackColor = System.Drawing.Color.Transparent;
+            this.Primary_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Primary_but.BackgroundImage")));
+            this.Primary_but.ButtonText = "Apply";
+            this.Primary_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Primary_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Primary_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.IdleBorderThickness = 1;
+            this.Primary_but.IdleCornerRadius = 20;
+            this.Primary_but.IdleFillColor = System.Drawing.Color.White;
+            this.Primary_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.Location = new System.Drawing.Point(490, 112);
+            this.Primary_but.Margin = new System.Windows.Forms.Padding(5);
+            this.Primary_but.Name = "Primary_but";
+            this.Primary_but.Size = new System.Drawing.Size(76, 38);
+            this.Primary_but.TabIndex = 34;
+            this.Primary_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Primary_but.Click += new System.EventHandler(this.Primary_but_Click);
+            // 
+            // check_but
+            // 
+            this.check_but.ActiveBorderThickness = 1;
+            this.check_but.ActiveCornerRadius = 20;
+            this.check_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.check_but.ActiveForecolor = System.Drawing.Color.White;
+            this.check_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.check_but.BackColor = System.Drawing.Color.Transparent;
+            this.check_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("check_but.BackgroundImage")));
+            this.check_but.ButtonText = "Apply";
+            this.check_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.check_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.check_but.IdleBorderThickness = 1;
+            this.check_but.IdleCornerRadius = 20;
+            this.check_but.IdleFillColor = System.Drawing.Color.White;
+            this.check_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.check_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.check_but.Location = new System.Drawing.Point(490, 155);
+            this.check_but.Margin = new System.Windows.Forms.Padding(5);
+            this.check_but.Name = "check_but";
+            this.check_but.Size = new System.Drawing.Size(76, 38);
+            this.check_but.TabIndex = 33;
+            this.check_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.check_but.Click += new System.EventHandler(this.check_but_Click);
+            // 
+            // default_but
+            // 
+            this.default_but.ActiveBorderThickness = 1;
+            this.default_but.ActiveCornerRadius = 20;
+            this.default_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.default_but.ActiveForecolor = System.Drawing.Color.White;
+            this.default_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.default_but.BackColor = System.Drawing.Color.Transparent;
+            this.default_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("default_but.BackgroundImage")));
+            this.default_but.ButtonText = "Apply";
+            this.default_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.default_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.default_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.default_but.IdleBorderThickness = 1;
+            this.default_but.IdleCornerRadius = 20;
+            this.default_but.IdleFillColor = System.Drawing.Color.White;
+            this.default_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.default_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.default_but.Location = new System.Drawing.Point(490, 68);
+            this.default_but.Margin = new System.Windows.Forms.Padding(5);
+            this.default_but.Name = "default_but";
+            this.default_but.Size = new System.Drawing.Size(76, 38);
+            this.default_but.TabIndex = 32;
+            this.default_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.default_but.Click += new System.EventHandler(this.default_but_Click);
+            // 
+            // null_but
+            // 
+            this.null_but.ActiveBorderThickness = 1;
+            this.null_but.ActiveCornerRadius = 20;
+            this.null_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.null_but.ActiveForecolor = System.Drawing.Color.White;
+            this.null_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.null_but.BackColor = System.Drawing.Color.Transparent;
+            this.null_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("null_but.BackgroundImage")));
+            this.null_but.ButtonText = "Apply";
+            this.null_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.null_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.null_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.null_but.IdleBorderThickness = 1;
+            this.null_but.IdleCornerRadius = 20;
+            this.null_but.IdleFillColor = System.Drawing.Color.White;
+            this.null_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.null_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.null_but.Location = new System.Drawing.Point(490, 24);
+            this.null_but.Margin = new System.Windows.Forms.Padding(5);
+            this.null_but.Name = "null_but";
+            this.null_but.Size = new System.Drawing.Size(76, 38);
+            this.null_but.TabIndex = 31;
+            this.null_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.null_but.Click += new System.EventHandler(this.null_but_Click);
+            // 
+            // Check_combo
+            // 
+            this.Check_combo.FormattingEnabled = true;
+            this.Check_combo.Items.AddRange(new object[] {
+            "Data Greater than Value",
+            "Data smaller than Value",
+            "Data Equale Value"});
+            this.Check_combo.Location = new System.Drawing.Point(124, 167);
+            this.Check_combo.Name = "Check_combo";
+            this.Check_combo.Size = new System.Drawing.Size(211, 24);
+            this.Check_combo.TabIndex = 30;
+            this.Check_combo.SelectedIndexChanged += new System.EventHandler(this.Check_combo_SelectedIndexChanged);
+            // 
+            // Null_combo
+            // 
+            this.Null_combo.FormattingEnabled = true;
+            this.Null_combo.Items.AddRange(new object[] {
+            "ID",
+            "Name",
+            "Salary",
+            "Gender"});
+            this.Null_combo.Location = new System.Drawing.Point(125, 28);
+            this.Null_combo.Name = "Null_combo";
+            this.Null_combo.Size = new System.Drawing.Size(121, 24);
+            this.Null_combo.TabIndex = 29;
+            // 
+            // Default_combo
+            // 
+            this.Default_combo.FormattingEnabled = true;
+            this.Default_combo.Items.AddRange(new object[] {
+            "ID",
+            "Name",
+            "Salary",
+            "Gender"});
+            this.Default_combo.Location = new System.Drawing.Point(125, 80);
+            this.Default_combo.Name = "Default_combo";
+            this.Default_combo.Size = new System.Drawing.Size(121, 24);
+            this.Default_combo.TabIndex = 28;
             // 
             // label8
             // 
@@ -572,148 +726,32 @@
             this.label14.TabIndex = 15;
             this.label14.Text = "Condition";
             // 
-            // Default_combo
+            // Music_but
             // 
-            this.Default_combo.FormattingEnabled = true;
-            this.Default_combo.Items.AddRange(new object[] {
-            "ID",
-            "Name",
-            "Salary",
-            "Gender"});
-            this.Default_combo.Location = new System.Drawing.Point(125, 82);
-            this.Default_combo.Name = "Default_combo";
-            this.Default_combo.Size = new System.Drawing.Size(121, 24);
-            this.Default_combo.TabIndex = 28;
-            // 
-            // Null_combo
-            // 
-            this.Null_combo.FormattingEnabled = true;
-            this.Null_combo.Items.AddRange(new object[] {
-            "ID",
-            "Name",
-            "Salary",
-            "Gender"});
-            this.Null_combo.Location = new System.Drawing.Point(125, 28);
-            this.Null_combo.Name = "Null_combo";
-            this.Null_combo.Size = new System.Drawing.Size(121, 24);
-            this.Null_combo.TabIndex = 29;
-            // 
-            // Check_combo
-            // 
-            this.Check_combo.FormattingEnabled = true;
-            this.Check_combo.Items.AddRange(new object[] {
-            "Data Greater than Value",
-            "Data Smaller than Value ",
-            "Data Equale value"});
-            this.Check_combo.Location = new System.Drawing.Point(124, 167);
-            this.Check_combo.Name = "Check_combo";
-            this.Check_combo.Size = new System.Drawing.Size(211, 24);
-            this.Check_combo.TabIndex = 30;
-            this.Check_combo.SelectedIndexChanged += new System.EventHandler(this.Check_combo_SelectedIndexChanged);
-            // 
-            // null_but
-            // 
-            this.null_but.ActiveBorderThickness = 1;
-            this.null_but.ActiveCornerRadius = 20;
-            this.null_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.null_but.ActiveForecolor = System.Drawing.Color.White;
-            this.null_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.null_but.BackColor = System.Drawing.Color.Transparent;
-            this.null_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("null_but.BackgroundImage")));
-            this.null_but.ButtonText = "Apply";
-            this.null_but.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.null_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.null_but.ForeColor = System.Drawing.Color.SeaGreen;
-            this.null_but.IdleBorderThickness = 1;
-            this.null_but.IdleCornerRadius = 20;
-            this.null_but.IdleFillColor = System.Drawing.Color.White;
-            this.null_but.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.null_but.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.null_but.Location = new System.Drawing.Point(490, 24);
-            this.null_but.Margin = new System.Windows.Forms.Padding(5);
-            this.null_but.Name = "null_but";
-            this.null_but.Size = new System.Drawing.Size(76, 38);
-            this.null_but.TabIndex = 31;
-            this.null_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.null_but.Click += new System.EventHandler(this.null_but_Click);
-            // 
-            // default_but
-            // 
-            this.default_but.ActiveBorderThickness = 1;
-            this.default_but.ActiveCornerRadius = 20;
-            this.default_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.default_but.ActiveForecolor = System.Drawing.Color.White;
-            this.default_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.default_but.BackColor = System.Drawing.Color.Transparent;
-            this.default_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("default_but.BackgroundImage")));
-            this.default_but.ButtonText = "Apply";
-            this.default_but.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.default_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.default_but.ForeColor = System.Drawing.Color.SeaGreen;
-            this.default_but.IdleBorderThickness = 1;
-            this.default_but.IdleCornerRadius = 20;
-            this.default_but.IdleFillColor = System.Drawing.Color.White;
-            this.default_but.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.default_but.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.default_but.Location = new System.Drawing.Point(490, 68);
-            this.default_but.Margin = new System.Windows.Forms.Padding(5);
-            this.default_but.Name = "default_but";
-            this.default_but.Size = new System.Drawing.Size(76, 38);
-            this.default_but.TabIndex = 32;
-            this.default_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.default_but.Click += new System.EventHandler(this.default_but_Click);
-            // 
-            // check_but
-            // 
-            this.check_but.ActiveBorderThickness = 1;
-            this.check_but.ActiveCornerRadius = 20;
-            this.check_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.check_but.ActiveForecolor = System.Drawing.Color.White;
-            this.check_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.check_but.BackColor = System.Drawing.Color.Transparent;
-            this.check_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("check_but.BackgroundImage")));
-            this.check_but.ButtonText = "Apply";
-            this.check_but.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.check_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_but.ForeColor = System.Drawing.Color.SeaGreen;
-            this.check_but.IdleBorderThickness = 1;
-            this.check_but.IdleCornerRadius = 20;
-            this.check_but.IdleFillColor = System.Drawing.Color.White;
-            this.check_but.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.check_but.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.check_but.Location = new System.Drawing.Point(490, 155);
-            this.check_but.Margin = new System.Windows.Forms.Padding(5);
-            this.check_but.Name = "check_but";
-            this.check_but.Size = new System.Drawing.Size(76, 38);
-            this.check_but.TabIndex = 33;
-            this.check_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.check_but.Click += new System.EventHandler(this.check_but_Click);
-            // 
-            // Primary_but
-            // 
-            this.Primary_but.ActiveBorderThickness = 1;
-            this.Primary_but.ActiveCornerRadius = 20;
-            this.Primary_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Primary_but.ActiveForecolor = System.Drawing.Color.White;
-            this.Primary_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Primary_but.BackColor = System.Drawing.Color.Transparent;
-            this.Primary_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Primary_but.BackgroundImage")));
-            this.Primary_but.ButtonText = "Apply";
-            this.Primary_but.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Primary_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Primary_but.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Primary_but.IdleBorderThickness = 1;
-            this.Primary_but.IdleCornerRadius = 20;
-            this.Primary_but.IdleFillColor = System.Drawing.Color.White;
-            this.Primary_but.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.Primary_but.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Primary_but.Location = new System.Drawing.Point(490, 112);
-            this.Primary_but.Margin = new System.Windows.Forms.Padding(5);
-            this.Primary_but.Name = "Primary_but";
-            this.Primary_but.Size = new System.Drawing.Size(76, 38);
-            this.Primary_but.TabIndex = 34;
-            this.Primary_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Primary_but.Click += new System.EventHandler(this.Primary_but_Click);
+            this.Music_but.ActiveBorderThickness = 1;
+            this.Music_but.ActiveCornerRadius = 20;
+            this.Music_but.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.Music_but.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.Music_but.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.Music_but.BackColor = System.Drawing.Color.Transparent;
+            this.Music_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Music_but.BackgroundImage")));
+            this.Music_but.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Music_but.ButtonText = "";
+            this.Music_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Music_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Music_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Music_but.IdleBorderThickness = 1;
+            this.Music_but.IdleCornerRadius = 20;
+            this.Music_but.IdleFillColor = System.Drawing.Color.White;
+            this.Music_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.Music_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.Music_but.Location = new System.Drawing.Point(994, 5);
+            this.Music_but.Margin = new System.Windows.Forms.Padding(5);
+            this.Music_but.Name = "Music_but";
+            this.Music_but.Size = new System.Drawing.Size(41, 44);
+            this.Music_but.TabIndex = 25;
+            this.Music_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Music_but.Click += new System.EventHandler(this.Music_but_Click);
             // 
             // Form1
             // 
@@ -722,7 +760,7 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(943, 705);
+            this.ClientSize = new System.Drawing.Size(1052, 524);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.save_button);
@@ -788,6 +826,7 @@
         private System.Windows.Forms.ComboBox Check_combo;
         private System.Windows.Forms.ComboBox Null_combo;
         private Bunifu.Framework.UI.BunifuThinButton2 Primary_but;
+        private Bunifu.Framework.UI.BunifuThinButton2 Music_but;
     }
 }
 
