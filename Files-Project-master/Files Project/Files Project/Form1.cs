@@ -25,8 +25,8 @@ namespace Files_Project
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
-            fileDialog.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm" ;
-            if(fileDialog.ShowDialog()==DialogResult.OK)
+            fileDialog.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 Filename_txt.Text = fileDialog.SafeFileName;
                 SaveFilee_txt.Text = fileDialog.FileName;
@@ -62,23 +62,19 @@ namespace Files_Project
                 string name = arr[1];
                 string gender = arr[2];
                 string salary = arr[3];
-                bool ID = false;
-                bool Name = false;
-                bool Gender = false;
-                bool Salary = false;
                 if (NotNull == "" && Def == "" && Primary_key == "" && Condition == "")
                 {
                     //  D = new Data(id, name, gender, salary);
                     dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                 }
-              
-                 if (NotNull != "")
+
+                if (NotNull != "")
                 {
                     if (NotNull == "Name" || NotNull == "name")
                     {
                         if (arr[1] == "")
                         {
-                            Name = true;
+                            continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
@@ -86,7 +82,7 @@ namespace Files_Project
                     {
                         if (arr[0] == "")
                         {
-                            ID = true;
+                            continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
@@ -95,7 +91,7 @@ namespace Files_Project
                     {
                         if (arr[2] == "")
                         {
-                            Gender = true;
+                            continue;
                         }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
 
@@ -104,36 +100,20 @@ namespace Files_Project
                     {
                         if (arr[3] == "")
                         {
-                            Salary = true;                       }
+                            continue;
+                        }
                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
-                    }
-                    if (Name)
-                    {
-                        MessageBox.Show("Data unstatisfied!!:The Name column has null value");
-                    }
-                    else if (ID)
-                    {
-                        MessageBox.Show("Data unstatisfied!!:The ID column has null value");
-
-                    }
-                    else if (Gender)
-                    {
-                        MessageBox.Show("Data unstatisfied!!:The Gender column has null value");
-                    }
-                    else if(Salary)
-                    {
-                        MessageBox.Show("Data unstatisfied!!:The Salary column has null value");
                     }
                 }
                 if (Def != "")
                 {
-                    if (Def == "id"||Def=="ID")
+                    if (Def == "id" || Def == "ID")
                     {
-                        if (arr[0]=="")
+                        if (arr[0] == "")
                         {
                             arr[0] = Value;
                         }
-                    dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
                     else if (Def == "name" || Def == "Name")
                     {
@@ -141,11 +121,11 @@ namespace Files_Project
                         {
                             arr[1] = Value;
                         }
-                    dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
                     }
-                    else if (Def=="Gender"||Def=="gender")
+                    else if (Def == "Gender" || Def == "gender")
                     {
-                        if (arr[2]=="")
+                        if (arr[2] == "")
                         {
                             arr[2] = Value;
                         }
@@ -162,19 +142,19 @@ namespace Files_Project
 
                 }
                /* if (Primary_key!="")
-                {
-                    if (Primary_key == "id" || Primary_key == "ID")
-                    {
-                        List<string> check = new List<string>();
-                        if(check.Contains(arr[0]))
-                        {
-                            continue;
-                        }
-                        check.Add(arr[0]);
-                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
-                    }
-                }
-                */
+                 {
+                     if (Primary_key == "id" || Primary_key == "ID")
+                     {
+                         List<string> check = new List<string>();
+                         if(check.Contains(arr[0]))
+                         {
+                             continue;
+                         }
+                         check.Add(arr[0]);
+                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                     }
+                 }
+                 /*
 
 
 
@@ -217,7 +197,7 @@ namespace Files_Project
                 writer.WriteEndElement();
 
 
-              
+
             }
             writer.WriteEndElement();
             writer.WriteEndDocument();

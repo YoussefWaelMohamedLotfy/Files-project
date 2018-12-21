@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.Filename_txt);
             this.panel1.Controls.Add(this.OpenFile_btn);
             this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(794, 161);
             this.panel1.TabIndex = 0;
@@ -98,7 +98,7 @@
             // 
             this.SaveFilee_txt.BorderColor = System.Drawing.Color.SeaGreen;
             this.SaveFilee_txt.Location = new System.Drawing.Point(48, 81);
-            this.SaveFilee_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaveFilee_txt.Margin = new System.Windows.Forms.Padding(4);
             this.SaveFilee_txt.Name = "SaveFilee_txt";
             this.SaveFilee_txt.ReadOnly = true;
             this.SaveFilee_txt.Size = new System.Drawing.Size(535, 22);
@@ -108,7 +108,7 @@
             // 
             this.Filename_txt.BorderColor = System.Drawing.Color.SeaGreen;
             this.Filename_txt.Location = new System.Drawing.Point(243, 36);
-            this.Filename_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Filename_txt.Margin = new System.Windows.Forms.Padding(4);
             this.Filename_txt.Name = "Filename_txt";
             this.Filename_txt.ReadOnly = true;
             this.Filename_txt.Size = new System.Drawing.Size(343, 22);
@@ -149,7 +149,7 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(16, 183);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(589, 332);
             this.dataGridView1.TabIndex = 10;
@@ -211,7 +211,7 @@
             // 
             // NotNull_text
             // 
-            this.NotNull_text.Location = new System.Drawing.Point(802, 215);
+            this.NotNull_text.Location = new System.Drawing.Point(802, 220);
             this.NotNull_text.Name = "NotNull_text";
             this.NotNull_text.Size = new System.Drawing.Size(100, 22);
             this.NotNull_text.TabIndex = 12;
@@ -303,7 +303,7 @@
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
