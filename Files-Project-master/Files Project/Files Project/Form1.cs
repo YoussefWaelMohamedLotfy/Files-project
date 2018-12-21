@@ -41,6 +41,7 @@ namespace Files_Project
             string Primary_key = Primary_text.Text;
             string Condition = Condition_text.Text;
             string Value = value_text.Text;
+            List<string> l1 = new List<string>();
 
 
             dataGridView1.Rows.Clear();
@@ -141,24 +142,75 @@ namespace Files_Project
                     }
 
                 }
-                /* if (Primary_key!="")
+                /* if (Primary_key != "")
                  {
-                     if (Primary_key == "id" || Primary_key == "ID")
-                     {
-                         List<string> check = new List<string>();
-                         if(check.Contains(arr[0]))
-                         {
-                             continue;
-                         }
-                         check.Add(arr[0]);
-                         dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
-                     }
                  }
-                 */
+                 dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                 {
+                     dataGridView1.Rows[1].Visible = false;
+                 }
+             }
+             */
 
+                if (Primary_key != "")
+                {
+                    if (Primary_key == "ID" || Primary_key == "id")
+                    {
+                        if (l1.Contains(arr[0]))
+                        {
+                            continue;
+                        }
+                        l1.Add(arr[0]);
 
+                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                    }
 
-            }
+                    else if (Primary_key == "Name" || Primary_key == "name")
+                    {
+                        if (l1.Contains(arr[1]))
+                        {
+                            continue;
+                        }
+                        l1.Add(arr[1]);
+                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                    }
+
+                   else if (Primary_key == "Gender" || Primary_key == "gender")
+                    {
+                        if (l1.Contains(arr[2]))
+                        {
+                            continue;
+                        }
+                        l1.Add(arr[2]);
+                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                    }
+                    
+
+                    else if (Primary_key == "Salary" || Primary_key == "salary")
+                    {
+                        if (l1.Contains(arr[3]))
+                        {
+                            continue;
+                        }
+                        l1.Add(arr[3]);
+                        dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
+                    }
+
+                }
+
+        } // Out of the loop
+            //if (Primary_key != "")
+            //{
+            //    if (Primary_key == "id" || Primary_key == "ID")
+            //    {
+            //        for (int i = 0; i < dataGridView1.RowCount; i++)
+            //        {
+            //           for 
+            //        }
+            //    }
+            //}
+
             SR.Close();
         }
 
