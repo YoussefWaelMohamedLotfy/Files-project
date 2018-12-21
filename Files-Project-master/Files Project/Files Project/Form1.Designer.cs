@@ -35,10 +35,6 @@
             this.Filename_txt = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.OpenFile_btn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.save_button = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label1 = new System.Windows.Forms.Label();
             this.NotNull_text = new System.Windows.Forms.TextBox();
@@ -50,21 +46,53 @@
             this.Condition_text = new System.Windows.Forms.TextBox();
             this.Value = new System.Windows.Forms.Label();
             this.value_text = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Primary_combo = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Check_txt = new System.Windows.Forms.TextBox();
+            this.Default_txt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Default_combo = new System.Windows.Forms.ComboBox();
+            this.Null_combo = new System.Windows.Forms.ComboBox();
+            this.Check_combo = new System.Windows.Forms.ComboBox();
+            this.null_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.default_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.check_but = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Primary_but = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.Display_but);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.SaveFilee_txt);
             this.panel1.Controls.Add(this.Filename_txt);
+            this.panel1.Controls.Add(this.bunifuCustomTextbox1);
             this.panel1.Controls.Add(this.OpenFile_btn);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 131);
+            this.panel1.Size = new System.Drawing.Size(846, 160);
             this.panel1.TabIndex = 0;
             // 
             // Display_but
@@ -86,7 +114,7 @@
             this.Display_but.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Display_but.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.Display_but.Location = new System.Drawing.Point(464, 17);
-            this.Display_but.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Display_but.Margin = new System.Windows.Forms.Padding(5);
             this.Display_but.Name = "Display_but";
             this.Display_but.Size = new System.Drawing.Size(102, 88);
             this.Display_but.TabIndex = 4;
@@ -130,7 +158,7 @@
             this.OpenFile_btn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.OpenFile_btn.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.OpenFile_btn.Location = new System.Drawing.Point(17, 17);
-            this.OpenFile_btn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.OpenFile_btn.Margin = new System.Windows.Forms.Padding(5);
             this.OpenFile_btn.Name = "OpenFile_btn";
             this.OpenFile_btn.Size = new System.Drawing.Size(157, 41);
             this.OpenFile_btn.TabIndex = 1;
@@ -139,36 +167,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 180);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 178);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(442, 270);
             this.dataGridView1.TabIndex = 10;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Gender";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Salary";
-            this.Column4.Name = "Column4";
             // 
             // save_button
             // 
@@ -188,10 +192,10 @@
             this.save_button.IdleFillColor = System.Drawing.Color.White;
             this.save_button.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.save_button.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.save_button.Location = new System.Drawing.Point(11, 458);
-            this.save_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.save_button.Location = new System.Drawing.Point(118, 458);
+            this.save_button.Margin = new System.Windows.Forms.Padding(5);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(176, 86);
+            this.save_button.Size = new System.Drawing.Size(176, 43);
             this.save_button.TabIndex = 5;
             this.save_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
@@ -203,7 +207,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(497, 175);
+            this.label1.Location = new System.Drawing.Point(23, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 21);
@@ -212,10 +216,10 @@
             // 
             // NotNull_text
             // 
-            this.NotNull_text.Location = new System.Drawing.Point(602, 179);
-            this.NotNull_text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NotNull_text.Location = new System.Drawing.Point(128, 69);
+            this.NotNull_text.Margin = new System.Windows.Forms.Padding(2);
             this.NotNull_text.Name = "NotNull_text";
-            this.NotNull_text.Size = new System.Drawing.Size(76, 20);
+            this.NotNull_text.Size = new System.Drawing.Size(109, 23);
             this.NotNull_text.TabIndex = 12;
             this.NotNull_text.TextChanged += new System.EventHandler(this.NotNull_text_TextChanged);
             // 
@@ -226,7 +230,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(497, 211);
+            this.label2.Location = new System.Drawing.Point(23, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 21);
@@ -240,7 +244,7 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(489, 243);
+            this.label3.Location = new System.Drawing.Point(15, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 21);
@@ -254,7 +258,7 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(501, 283);
+            this.label4.Location = new System.Drawing.Point(23, 172);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 21);
@@ -263,26 +267,26 @@
             // 
             // Default_text
             // 
-            this.Default_text.Location = new System.Drawing.Point(602, 211);
-            this.Default_text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Default_text.Location = new System.Drawing.Point(128, 101);
+            this.Default_text.Margin = new System.Windows.Forms.Padding(2);
             this.Default_text.Name = "Default_text";
-            this.Default_text.Size = new System.Drawing.Size(76, 20);
+            this.Default_text.Size = new System.Drawing.Size(109, 23);
             this.Default_text.TabIndex = 16;
             // 
             // Primary_text
             // 
-            this.Primary_text.Location = new System.Drawing.Point(602, 247);
-            this.Primary_text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Primary_text.Location = new System.Drawing.Point(130, 134);
+            this.Primary_text.Margin = new System.Windows.Forms.Padding(2);
             this.Primary_text.Name = "Primary_text";
-            this.Primary_text.Size = new System.Drawing.Size(76, 20);
+            this.Primary_text.Size = new System.Drawing.Size(107, 23);
             this.Primary_text.TabIndex = 17;
             // 
             // Condition_text
             // 
-            this.Condition_text.Location = new System.Drawing.Point(602, 283);
-            this.Condition_text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Condition_text.Location = new System.Drawing.Point(130, 173);
+            this.Condition_text.Margin = new System.Windows.Forms.Padding(2);
             this.Condition_text.Name = "Condition_text";
-            this.Condition_text.Size = new System.Drawing.Size(76, 20);
+            this.Condition_text.Size = new System.Drawing.Size(107, 23);
             this.Condition_text.TabIndex = 18;
             // 
             // Value
@@ -292,7 +296,7 @@
             this.Value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Value.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Value.ForeColor = System.Drawing.Color.White;
-            this.Value.Location = new System.Drawing.Point(691, 213);
+            this.Value.Location = new System.Drawing.Point(322, 149);
             this.Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Value.Name = "Value";
             this.Value.Size = new System.Drawing.Size(53, 21);
@@ -301,12 +305,414 @@
             // 
             // value_text
             // 
-            this.value_text.Location = new System.Drawing.Point(748, 213);
-            this.value_text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.value_text.Location = new System.Drawing.Point(298, 101);
+            this.value_text.Margin = new System.Windows.Forms.Padding(2);
             this.value_text.Name = "value_text";
-            this.value_text.Size = new System.Drawing.Size(76, 20);
+            this.value_text.Size = new System.Drawing.Size(86, 23);
             this.value_text.TabIndex = 19;
             this.value_text.TextChanged += new System.EventHandler(this.value_text_TextChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.NotNull_text);
+            this.groupBox1.Controls.Add(this.value_text);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.Value);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.Condition_text);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.Primary_text);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.Default_text);
+            this.groupBox1.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(460, 196);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(406, 207);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Constrains";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(108, 34);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 21);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Nmae of Column";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(242, 172);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(65, 24);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // bunifuCustomTextbox1
+            // 
+            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(233, 124);
+            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
+            this.bunifuCustomTextbox1.ReadOnly = true;
+            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(125, 20);
+            this.bunifuCustomTextbox1.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(124, 121);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 21);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Delemiter";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(36, 92);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(48, 23);
+            this.radioButton1.TabIndex = 25;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "txt";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.White;
+            this.radioButton2.Location = new System.Drawing.Point(34, 125);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(69, 23);
+            this.radioButton2.TabIndex = 26;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Excel";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(312, 172);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(86, 23);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(241, 102);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 21);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "value";
+            // 
+            // Primary_combo
+            // 
+            this.Primary_combo.FormattingEnabled = true;
+            this.Primary_combo.Items.AddRange(new object[] {
+            "ID",
+            "Name"});
+            this.Primary_combo.Location = new System.Drawing.Point(125, 126);
+            this.Primary_combo.Name = "Primary_combo";
+            this.Primary_combo.Size = new System.Drawing.Size(121, 24);
+            this.Primary_combo.TabIndex = 27;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.Primary_but);
+            this.groupBox2.Controls.Add(this.check_but);
+            this.groupBox2.Controls.Add(this.default_but);
+            this.groupBox2.Controls.Add(this.null_but);
+            this.groupBox2.Controls.Add(this.Check_combo);
+            this.groupBox2.Controls.Add(this.Null_combo);
+            this.groupBox2.Controls.Add(this.Default_combo);
+            this.groupBox2.Controls.Add(this.Primary_combo);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.Check_txt);
+            this.groupBox2.Controls.Add(this.Default_txt);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(337, 458);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(584, 207);
+            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Constrains";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(340, 81);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 21);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "value";
+            // 
+            // Check_txt
+            // 
+            this.Check_txt.Location = new System.Drawing.Point(397, 167);
+            this.Check_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.Check_txt.Name = "Check_txt";
+            this.Check_txt.Size = new System.Drawing.Size(86, 23);
+            this.Check_txt.TabIndex = 22;
+            // 
+            // Default_txt
+            // 
+            this.Default_txt.Location = new System.Drawing.Point(397, 80);
+            this.Default_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.Default_txt.Name = "Default_txt";
+            this.Default_txt.Size = new System.Drawing.Size(86, 23);
+            this.Default_txt.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(23, 31);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 21);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Not Null";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(340, 167);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 21);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "value";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(23, 82);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 21);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Default";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(15, 126);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 21);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Primary Key";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(23, 172);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 21);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Condition";
+            // 
+            // Default_combo
+            // 
+            this.Default_combo.FormattingEnabled = true;
+            this.Default_combo.Items.AddRange(new object[] {
+            "ID",
+            "Name",
+            "Salary",
+            "Gender"});
+            this.Default_combo.Location = new System.Drawing.Point(125, 82);
+            this.Default_combo.Name = "Default_combo";
+            this.Default_combo.Size = new System.Drawing.Size(121, 24);
+            this.Default_combo.TabIndex = 28;
+            // 
+            // Null_combo
+            // 
+            this.Null_combo.FormattingEnabled = true;
+            this.Null_combo.Items.AddRange(new object[] {
+            "ID",
+            "Name",
+            "Salary",
+            "Gender"});
+            this.Null_combo.Location = new System.Drawing.Point(125, 28);
+            this.Null_combo.Name = "Null_combo";
+            this.Null_combo.Size = new System.Drawing.Size(121, 24);
+            this.Null_combo.TabIndex = 29;
+            // 
+            // Check_combo
+            // 
+            this.Check_combo.FormattingEnabled = true;
+            this.Check_combo.Items.AddRange(new object[] {
+            "Data Greater than Value",
+            "Data Smaller than Value ",
+            "Data Equale value"});
+            this.Check_combo.Location = new System.Drawing.Point(124, 167);
+            this.Check_combo.Name = "Check_combo";
+            this.Check_combo.Size = new System.Drawing.Size(211, 24);
+            this.Check_combo.TabIndex = 30;
+            this.Check_combo.SelectedIndexChanged += new System.EventHandler(this.Check_combo_SelectedIndexChanged);
+            // 
+            // null_but
+            // 
+            this.null_but.ActiveBorderThickness = 1;
+            this.null_but.ActiveCornerRadius = 20;
+            this.null_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.null_but.ActiveForecolor = System.Drawing.Color.White;
+            this.null_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.null_but.BackColor = System.Drawing.Color.Transparent;
+            this.null_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("null_but.BackgroundImage")));
+            this.null_but.ButtonText = "Apply";
+            this.null_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.null_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.null_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.null_but.IdleBorderThickness = 1;
+            this.null_but.IdleCornerRadius = 20;
+            this.null_but.IdleFillColor = System.Drawing.Color.White;
+            this.null_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.null_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.null_but.Location = new System.Drawing.Point(490, 24);
+            this.null_but.Margin = new System.Windows.Forms.Padding(5);
+            this.null_but.Name = "null_but";
+            this.null_but.Size = new System.Drawing.Size(76, 38);
+            this.null_but.TabIndex = 31;
+            this.null_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.null_but.Click += new System.EventHandler(this.null_but_Click);
+            // 
+            // default_but
+            // 
+            this.default_but.ActiveBorderThickness = 1;
+            this.default_but.ActiveCornerRadius = 20;
+            this.default_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.default_but.ActiveForecolor = System.Drawing.Color.White;
+            this.default_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.default_but.BackColor = System.Drawing.Color.Transparent;
+            this.default_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("default_but.BackgroundImage")));
+            this.default_but.ButtonText = "Apply";
+            this.default_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.default_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.default_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.default_but.IdleBorderThickness = 1;
+            this.default_but.IdleCornerRadius = 20;
+            this.default_but.IdleFillColor = System.Drawing.Color.White;
+            this.default_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.default_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.default_but.Location = new System.Drawing.Point(490, 68);
+            this.default_but.Margin = new System.Windows.Forms.Padding(5);
+            this.default_but.Name = "default_but";
+            this.default_but.Size = new System.Drawing.Size(76, 38);
+            this.default_but.TabIndex = 32;
+            this.default_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.default_but.Click += new System.EventHandler(this.default_but_Click);
+            // 
+            // check_but
+            // 
+            this.check_but.ActiveBorderThickness = 1;
+            this.check_but.ActiveCornerRadius = 20;
+            this.check_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.check_but.ActiveForecolor = System.Drawing.Color.White;
+            this.check_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.check_but.BackColor = System.Drawing.Color.Transparent;
+            this.check_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("check_but.BackgroundImage")));
+            this.check_but.ButtonText = "Apply";
+            this.check_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.check_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.check_but.IdleBorderThickness = 1;
+            this.check_but.IdleCornerRadius = 20;
+            this.check_but.IdleFillColor = System.Drawing.Color.White;
+            this.check_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.check_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.check_but.Location = new System.Drawing.Point(490, 155);
+            this.check_but.Margin = new System.Windows.Forms.Padding(5);
+            this.check_but.Name = "check_but";
+            this.check_but.Size = new System.Drawing.Size(76, 38);
+            this.check_but.TabIndex = 33;
+            this.check_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.check_but.Click += new System.EventHandler(this.check_but_Click);
+            // 
+            // Primary_but
+            // 
+            this.Primary_but.ActiveBorderThickness = 1;
+            this.Primary_but.ActiveCornerRadius = 20;
+            this.Primary_but.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.ActiveForecolor = System.Drawing.Color.White;
+            this.Primary_but.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.BackColor = System.Drawing.Color.Transparent;
+            this.Primary_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Primary_but.BackgroundImage")));
+            this.Primary_but.ButtonText = "Apply";
+            this.Primary_but.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Primary_but.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Primary_but.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.IdleBorderThickness = 1;
+            this.Primary_but.IdleCornerRadius = 20;
+            this.Primary_but.IdleFillColor = System.Drawing.Color.White;
+            this.Primary_but.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.Primary_but.Location = new System.Drawing.Point(494, 116);
+            this.Primary_but.Margin = new System.Windows.Forms.Padding(5);
+            this.Primary_but.Name = "Primary_but";
+            this.Primary_but.Size = new System.Drawing.Size(76, 38);
+            this.Primary_but.TabIndex = 34;
+            this.Primary_but.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Primary_but.Click += new System.EventHandler(this.Primary_but_Click);
             // 
             // Form1
             // 
@@ -315,17 +721,9 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(831, 609);
-            this.Controls.Add(this.value_text);
-            this.Controls.Add(this.Value);
-            this.Controls.Add(this.Condition_text);
-            this.Controls.Add(this.Primary_text);
-            this.Controls.Add(this.Default_text);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.NotNull_text);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(943, 705);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -336,8 +734,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -349,10 +750,6 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox Filename_txt;
         private Bunifu.Framework.UI.BunifuThinButton2 Display_but;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Bunifu.Framework.UI.BunifuThinButton2 save_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox NotNull_text;
@@ -364,6 +761,32 @@
         private System.Windows.Forms.TextBox Condition_text;
         private System.Windows.Forms.Label Value;
         private System.Windows.Forms.TextBox value_text;
+        private System.Windows.Forms.Label label6;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox Primary_combo;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox Default_combo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox Check_txt;
+        private System.Windows.Forms.TextBox Default_txt;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private Bunifu.Framework.UI.BunifuThinButton2 check_but;
+        private Bunifu.Framework.UI.BunifuThinButton2 default_but;
+        private Bunifu.Framework.UI.BunifuThinButton2 null_but;
+        private System.Windows.Forms.ComboBox Check_combo;
+        private System.Windows.Forms.ComboBox Null_combo;
+        private Bunifu.Framework.UI.BunifuThinButton2 Primary_but;
     }
 }
 
