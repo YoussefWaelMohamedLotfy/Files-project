@@ -254,25 +254,26 @@ namespace Files_Project
                 {
 
                     writer.WriteStartElement("Person");
-                    writer.WriteStartAttribute("ID");
+                    writer.WriteStartAttribute(dataGridView1.Columns[0].HeaderCell.Value.ToString());
                     writer.WriteValue(dataGridView1.Rows[i].Cells[0].Value.ToString());
                     writer.WriteEndAttribute();
                     writer.WriteEndElement();
 
                     writer.WriteStartElement("Person");
-                    writer.WriteStartAttribute("Name");
+                    writer.WriteStartAttribute(dataGridView1.Columns[1].HeaderCell.Value.ToString());
                     writer.WriteValue(dataGridView1.Rows[i].Cells[1].Value.ToString());
                     writer.WriteEndAttribute();
                     writer.WriteEndElement();
 
                     writer.WriteStartElement("Person");
-                    writer.WriteStartAttribute("Gender");
+                    writer.WriteStartAttribute(dataGridView1.Columns[2].HeaderCell.Value.ToString());
                     writer.WriteValue(dataGridView1.Rows[i].Cells[2].Value.ToString());
                     writer.WriteEndAttribute();
                     writer.WriteEndElement();
 
                     writer.WriteStartElement("Person");
-                    writer.WriteStartAttribute("Salary");
+                    writer.WriteStartAttribute(dataGridView1.Columns[3].HeaderCell.Value.ToString());
+                    dataGridView1.Columns[0].HeaderCell.Value.ToString();
                     writer.WriteValue(dataGridView1.Rows[i].Cells[3].Value.ToString());
                     writer.WriteEndAttribute();
                     writer.WriteEndElement();
