@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml;
+using Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
 
 namespace Files_Project
 {
@@ -16,7 +18,7 @@ namespace Files_Project
     {
         List<string> mylist;
         string record;
-
+        
         bool IsNull =false;
         //bool IsDefault = false;
         bool IsRepeat = false;
@@ -37,7 +39,7 @@ namespace Files_Project
             
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
-            fileDialog.Filter = "txt files (*.txt)|*.txt|Excel Files| *.xls; *.xlsx; *.xlsm";
+            fileDialog.Filter = "txt files (*.txt)|*.txt";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 Filename_txt.Text = fileDialog.SafeFileName;
@@ -51,12 +53,15 @@ namespace Files_Project
             open = true;
             dataGridView1.Visible = true;
             save_button.Visible = true;
+            groupBox1.Visible = true;
             groupBox2.Visible = true;
+
             string NotNull = NotNull_text.Text;
             string Def = Default_text.Text;
             string Primary_key = Primary_text.Text;
             string Condition = Condition_text.Text;
             string Value = value_text.Text;
+
             List<string> l1 = new List<string>();
             string Delemiter = Del_txt.Text;
 
@@ -107,7 +112,7 @@ namespace Files_Project
                         {
                             if (arr[1] == "")
                             {
-                                MessageBox.Show("Name shouldn't be empty");
+                                //MessageBox.Show("Name shouldn't be empty");
                                 continue;
                             }
                             dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -116,7 +121,7 @@ namespace Files_Project
                         {
                             if (arr[0] == "")
                             {
-                                MessageBox.Show("ID shouldn't be empty");
+                                //MessageBox.Show("ID shouldn't be empty");
 
                                 continue;
                             }
@@ -127,7 +132,7 @@ namespace Files_Project
                         {
                             if (arr[2] == "")
                             {
-                                MessageBox.Show("Gender shouldn't be empty");
+                                //MessageBox.Show("Gender shouldn't be empty");
                                 continue;
                             }
                             dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -137,7 +142,7 @@ namespace Files_Project
                         {
                             if (arr[3] == "")
                             {
-                                MessageBox.Show("Salary shouldn't be empty");
+                                //MessageBox.Show("Salary shouldn't be empty");
                                 continue;
                             }
                             dataGridView1.Rows.Add(arr[0], arr[1], arr[2], arr[3]);
@@ -187,7 +192,7 @@ namespace Files_Project
                         {
                             if (l1.Contains(arr[0]))
                             {
-                                MessageBox.Show("ID should be unique");
+                                //MessageBox.Show("ID should be unique");
 
                                 break;
                             }
@@ -200,7 +205,7 @@ namespace Files_Project
                         {
                             if (l1.Contains(arr[1]))
                             {
-                                MessageBox.Show("Name should be unique");
+                                //MessageBox.Show("Name should be unique");
                                 break;
                             }
                             l1.Add(arr[1]);
@@ -211,7 +216,7 @@ namespace Files_Project
                         {
                             if (l1.Contains(arr[2]))
                             {
-                                MessageBox.Show("Gender should be unique");
+                                //MessageBox.Show("Gender should be unique");
                                 break;
                             }
                             l1.Add(arr[2]);
@@ -223,7 +228,7 @@ namespace Files_Project
                         {
                             if (l1.Contains(arr[3]))
                             {
-                                MessageBox.Show("Salary should be unique");
+                                //MessageBox.Show("Salary should be unique");
                                 break;
                             }
                             l1.Add(arr[3]);
@@ -285,6 +290,7 @@ namespace Files_Project
                 writer.WriteEndDocument();
 
                 writer.Flush();
+
 
 
 
@@ -383,7 +389,7 @@ namespace Files_Project
                     if (string.IsNullOrEmpty(dataGridView1.Rows[i].Cells[0].Value.ToString()))
                     {
                         dataGridView1.Rows[i].Cells[0].Value = default_valu;
-                        mylist[i+0+dataGridView1.Columns.Count] = default_valu;
+                      
                     }
                 }
             }
@@ -484,7 +490,11 @@ namespace Files_Project
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-                   
+                    if (IsRepeat == true)
+                    {
+                        break;
+                    }
+
                     for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
                     {
 
@@ -496,6 +506,7 @@ namespace Files_Project
                             break;
                         }
                     }
+
                 }
             }
 
@@ -503,9 +514,14 @@ namespace Files_Project
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
+                    if (IsRepeat == true)
+                    {
+                        break;
+                    }
                     for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
                     {
 
+                      
                         if (dataGridView1.Rows[i].Cells[3].Value.ToString() == dataGridView1.Rows[j].Cells[3].Value.ToString())
                         {
 
@@ -521,6 +537,10 @@ namespace Files_Project
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
+                    if (IsRepeat == true)
+                    {
+                        break;
+                    }
                     for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
                     {
 
@@ -539,6 +559,10 @@ namespace Files_Project
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
+                    if (IsRepeat == true)
+                    {
+                        break;
+                    }
                     for (int j = i + 1; j < dataGridView1.Rows.Count - 1; j++)
                     {
 
@@ -563,8 +587,7 @@ namespace Files_Project
 
         private void Music_but_Click(object sender, EventArgs e)
         {
-            System.Media.SoundPlayer SP = new System.Media.SoundPlayer(@"C:\Users\el aqsa\Videos\Files-Project\Files-Project-master\Files Project\Files Project\Alan.wav");
-            SP.Play();
+          
            
         }
 
@@ -578,6 +601,98 @@ namespace Files_Project
             Display_but.Visible = true;
 
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            string fname = "";
+            OpenFileDialog fdlg = new OpenFileDialog();
+            fdlg.Title = "Excel File Dialog";
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.Filter = "Excel Files| *.xls; *.xlsx; *.xlsm";
+            fdlg.FilterIndex = 2;
+            fdlg.RestoreDirectory = true;
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                fname = fdlg.FileName;
+            }
+
+
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(fname);
+            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Microsoft.Office.Interop.Excel.Range xlRange = xlWorksheet.UsedRange;
+
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+
+            // dt.Column = colCount;  
+            dataGridView1.ColumnCount = colCount;
+            dataGridView1.RowCount = rowCount;
+
+            for (int i = 1; i <= rowCount; i++)
+            {
+                for (int j = 1; j <= colCount; j++)
+                {
+
+
+                    //write the value to the Grid  
+
+
+                    if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
+                    {
+                        dataGridView1.Rows[i - 1].Cells[j - 1].Value = xlRange.Cells[i, j].Value2.ToString();
+                    }
+                     
+
+                    //add useful things here!     
+                }
+            }
+
+            //cleanup  
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+         
+
+            //release com objects to fully kill excel process from running in the background  
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorksheet);
+
+            //close and release  
+            xlWorkbook.Close();
+            Marshal.ReleaseComObject(xlWorkbook);
+
+            //quit and release  
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlApp);
+
+
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Visible = true;
+            OpenFile_excel.Visible = true;
+            OpenFile_btn.Visible = false;
+            Filename_txt.Visible = false;
+            SaveFilee_txt.Visible = false;
+            groupBox2.Visible = true;
+            groupBox1.Visible = false;
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            OpenFile_btn.Visible = true;
+            Filename_txt.Visible = true;
+            SaveFilee_txt.Visible = true;
+            
+            OpenFile_excel.Visible = false;
+            groupBox2.Visible = false;
+       
+        }
     }
-    
 }
+    
+
